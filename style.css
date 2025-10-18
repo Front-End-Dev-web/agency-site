@@ -2713,6 +2713,7 @@ font-size: 45px;
     font-weight: 600;
     font-style: normal;
   }
+
   h1,
   h2,
   h3 {
@@ -2722,8 +2723,8 @@ font-size: 45px;
     font-style: normal;
   }
   header nav #header-logo img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     object-fit: contain;
   }
   header nav ul li button img {
@@ -2740,7 +2741,7 @@ font-size: 45px;
   }
 
   nav {
-    width: 95%;
+    width: 90%;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -2768,7 +2769,7 @@ font-size: 45px;
   }
   header nav #nav-menu ul li a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     color: #4d4d4d;
     font-weight: 500;
   }
@@ -2783,7 +2784,7 @@ font-size: 45px;
     border: none;
     width: 12em;
     color: white;
-    height: 50px;
+    height: 45px;
     gap: 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -2906,7 +2907,7 @@ font-size: 45px;
     margin-bottom: 15px;
   }
   #clients #clients_inner_section #client_heading h1 {
-    font-size: 30px;
+    font-size: 25px;
     color: #4d4d4d;
     margin-bottom: 10px;
   }
@@ -2958,7 +2959,7 @@ font-size: 45px;
   }
 
   #community #inner-community #community-heading #community_heading {
-    font-size: 30px;
+    font-size: 25px;
     color: #4d4d4d;
     margin-bottom: 20px;
   }
@@ -3060,7 +3061,7 @@ font-size: 45px;
     gap: 30px;
   }
   #ad #inner-ad #inner-ad-heading h1 {
-    font-size: 30px;
+  font-size: 25px;
     line-height: 40px;
     color: #4d4d4d;
   }
@@ -3119,7 +3120,7 @@ font-size: 45px;
     #achivements_heading
     #achievments_heading_first {
     color: #4d4d4d;
-    font-size: 30px;
+  font-size: 25px;
     margin-bottom: 10px;
   }
   #achivements
@@ -3127,7 +3128,7 @@ font-size: 45px;
     #achivements_heading
     #achievments_heading_second {
     color: #4caf4f;
-    font-size: 30px;
+  font-size: 25px;
   }
 
   #achivements #inner-achivements #achivements_heading p {
@@ -3228,7 +3229,7 @@ font-size: 45px;
   }
   #inner-calendar #calendar-content h1 {
     color: #4d4d4d;
-    font-size: 30px;
+   font-size: 25px;
   }
   #inner-calendar #calendar-content p {
     text-align: justify;
@@ -3241,14 +3242,14 @@ font-size: 45px;
     border: none;
     width: 10em;
     color: white;
-    height: 55px;
+    height: 45px;
     gap: 10px;
     border-radius: 5px;
     font-size: 14px;
   }
 
   #customers {
-    height: 700px;
+    height: 800px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -3363,7 +3364,7 @@ font-size: 45px;
   }
   #community_updates #inner-community_updates #inner-community-heading h1 {
     color: #4d4d4d;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
   }
   #community_updates #inner-community_updates #inner-community-heading p {
@@ -3478,12 +3479,12 @@ font-size: 45px;
     background-color: white;
     width: 100%;
     h1 {
-      font-size: 30px;
+      font-size: 25px;
       width: 80%;
       text-align: center;
     }
     button {
-      height: 50px;
+      height: 45px;
       width: 9rem;
       text-align: center;
       display: flex;
