@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
-*{
+
+           @media screen and (max-width:576px) {
+    html{
+        scroll-behavior: smooth;
+    }
+    body{
+        overflow-x: hidden;
+    }
+            *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 a{
  
@@ -30,25 +36,24 @@ header nav #header-logo img{
     object-fit: contain;
 }
 header nav ul li button img{
-height: 50px;
+    height: 50px;
 }
 header{
     height: 100px;
     box-shadow: 0 2px 16px 2px   #ABBED1;
-display: flex;
-width: 100%;
-justify-content: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    
+    align-items: center;
+}
 
-align-items: center;
-}
-#hamburger{
-    display: none;
-}
 nav{
     width: 90%;
     height: 100%;
     display: flex;
     justify-content: space-between;
+   
     align-items: center;
 }
 header nav #header-logo{
@@ -59,10 +64,15 @@ header nav #header-logo{
 
 header nav #nav-menu ul{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding-left: 30px;
+    height: 100%;
 }
+
+
 header nav #nav-menu ul{
     list-style: none;
 }
@@ -72,64 +82,94 @@ header nav #nav-menu ul li a{
 color: #4D4D4D;
 font-weight: 500;
 }
+
 header nav #nav-menu ul li button{
     display: flex;
     justify-content:center;
     align-items: center;
     align-content: center;
-    padding:0px 15px ;
+    padding:0px 10px ;
     background-color: #4CAF4F;
     border: none;
     width: 12em;
     color: white;
-    height: 55px;
+    height: 50px;
     gap: 10px;
     border-radius: 5px;
-font-size: 15px;
+font-size: 14px;
 }
 header nav #nav-menu ul li button img{
     height: 30px;
 }
-
-
-
-
+ #nav-menu{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(241, 241, 241);
+    color: black;
+    display: none;
+}
+#nav-menu.active{
+    display:block;
+}
+ #nav-menu ul{
+    width: 100%;
+ }
+#hamburger{
+    display: block;
+}
+#hamburger{
+ display: flex;
+ justify-content: center;
+ align-items: center;   
+}
+#hamburger img{
+height: 50px;
+}
 #hero-section{
     display: flex;
     justify-content:center;
     align-items: center;
   width: 100%;
-  height: 600px;
+  height: 540px;
+  padding: 20px 0px;
+ 
 }
 #hero-section #hero-inner-section{
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
-    width: 90%;
+    flex-direction: column;
+    gap: 40px;
+    width:100%;
+    padding: 10px;
 }
 #hero-section #hero-inner-section #hero-img img{
-    height: 400px;
-    width: 400px;
+    height: 200px;
+    width: 100%;
     object-fit: contain;
+    object-position: left;
 }
 /* 4CAF4F */
 
 #hero-section #hero-inner-section #hero-content #hero-heading #first-heading{
 color:#4D4D4D ;
-font-size: 40px;
+font-size: 30px;
 letter-spacing: 2px;
 
 }
 #hero-section #hero-inner-section #hero-content #hero-heading #second-heading{
 color:#4CAF4F;
-font-size: 40px;
+font-size: 30px;
 letter-spacing: 2px;
 margin-top: 6px;
 }
 #hero-section #hero-inner-section #hero-content #hero-heading  #hero-text{
     margin-top: 20px;
     margin-bottom: 20px;
-font-size: 18px;
+font-size: 16px;
 color: #717171;
 }
  /* background-color: #4CAF4F; */
@@ -137,7 +177,8 @@ color: #717171;
  #hero-section #hero-inner-section #hero-content  button {
     background-color: #4CAF4F; 
     color: white;
-    height: 55px;
+    height: 50px;
+    /* width: 150px; */
     width: 10em;
     font-size: 15px;
     border: none;
@@ -145,7 +186,7 @@ color: #717171;
     cursor: pointer;
  }
 #clients{
-     height: 300px;
+     height: 500px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -167,20 +208,22 @@ color: #717171;
     gap: 10px;
 }
 #clients #clients_inner_section #client-data #client-logo img{
-    height: 140px;
+    height: 100px;
 }
 #clients #clients_inner_section #client_heading{
     margin-bottom: 15px;
 }
 #clients #clients_inner_section #client_heading h1{
-font-size: 40px;
+font-size: 30px;
 color: #4D4D4D;
 margin-bottom: 10px;
 }
 /* 717171 */
 #clients #clients_inner_section #client_heading p{
    color: #717171; 
-   font-size: 18px;
+   font-size: 16px;
+   text-align: center;
+   line-height: 25px;
 }
 #clients #clients_inner_section #client-data{
     margin-top: 40px;
@@ -192,6 +235,8 @@ margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 #clients #clients_inner_section #client-data #client-logo img{
     height: 60px;
@@ -199,7 +244,7 @@ margin-bottom: 10px;
 #community{
     width: 100%;
 
-    height:590px ;
+    height:800px ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -216,32 +261,34 @@ margin-bottom: 10px;
     align-items: center;
     text-align: center;
     flex-direction: column;
-    width: 60%;
+    width:100%;
 }
 
 #community #inner-community #community-heading #community_heading{
-    font-size: 40px;
+    font-size:30px;
     color: #4D4D4D;
     margin-bottom: 20px;
 }
 
 
 #community #inner-community #community-heading #community-text{
-    font-size:20px;
+    font-size:16px;
      color: #717171;
      
 }
 #community #inner-community #community-content{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 70px;
+    flex-direction: column;
+    justify-content: center;
+
     width: 100%;
+    gap: 20px;
 }
 
 #community #inner-community #community-content #community-cards img{
-    height: 60px;
-    width:60px;
+    height: 50px;
+    width:50px;
     object-fit: contain;
 }
 
@@ -249,19 +296,21 @@ margin-bottom: 10px;
     display: flex;
     justify-content: center;align-items: center;flex-direction: column;
 text-align: center;
-width: 270px;
+width: 100%;
+height: 30%;
+
 }
 
 
 #community #inner-community #community-content #community-cards img,
 #community #inner-community #community-content #community-cards h2,
 #community #inner-community #community-content #community-cards p{
-    margin-bottom: 10px;
+    margin-bottom:5px;
 }
 
 #community #inner-community #community-content #community-cards h2{
         color: #4D4D4D;
-        font-size: 30px;
+        font-size: 25px;
 }
 
 #community #inner-community #community-content #community-cards p{
@@ -289,21 +338,26 @@ z-index: -1;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 500px;
+    height:650px;
 
 }
 #ad #inner-ad{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 90%;
+    flex-direction: column-reverse;
+    width:100%;
+    
     height: 100% ;
+padding: 0 20px;
+gap: 10px;
 }
 
 #ad #inner-ad #inner-ad-img img{
-    height: 500px;
-    width: 500px;
+    height: 200px;
+    width: 100%;
     object-fit: contain;
+    object-position: left;
 }
 #ad #inner-ad #inner-ad-heading {
     display: flex;
@@ -313,29 +367,30 @@ z-index: -1;
     gap: 30px;
 }
 #ad #inner-ad #inner-ad-heading h1{
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 30px;
+    line-height: 40px;
           color: #4D4D4D;
 
 }
 #ad #inner-ad #inner-ad-heading p{
     color: #717171;
-    font-size: 20px;
+    font-size: 14px;
+    text-align: justify;
       
 }
 #ad #inner-ad #inner-ad-heading button{
   background-color: #4CAF4F; 
     color: white;
-    height: 55px;
-    width: 10em;
-    font-size: 15px;
+    height: 45px;
+    width: 8em;
+    font-size: 14px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 #achivements{
-    height: 467px;
+   height: 600px;
     width:100%;
     display: flex;
     justify-content: center;
@@ -344,14 +399,15 @@ z-index: -1;
 }
 #achivements #inner-achivements {
     display: flex;
-justify-content: space-between;
+justify-content: center;
 align-items: center;
+flex-direction: column;
 align-content: center;
 width: 90%;
-
+gap: 30px;
 }
 #achivements #inner-achivements  #achivements_content  #achievments_counts .card_image img{
-    height: 30px;
+    height: 20px;
 }
 #achivements #inner-achivements #achivements_heading{
     display: flex;
@@ -362,22 +418,22 @@ width: 90%;
 
 #achivements #inner-achivements #achivements_heading
 {
-    width: 70%;
+    width: 100%;
 }
 #achivements #inner-achivements #achivements_heading #achievments_heading_first{
     color: #4D4D4D;
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 10px;
 }
 #achivements #inner-achivements #achivements_heading #achievments_heading_second{
     color: #4CAF4F;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 #achivements #inner-achivements #achivements_heading p{
     margin-top: 20px;
     color: #717171;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 
@@ -391,30 +447,35 @@ width: 90%;
 
 #achivements #inner-achivements #achivements_content  #achievments_counts {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    gap: 70px;
+    gap: 30px;
     align-items: center;
 }
 #achivements #inner-achivements #achivements_content  #achievments_counts .cardss{
-  width: 190px;
+  width: 150px;
+  flex-direction: column;
   height: 100px;
     display: flex;
-   
+   justify-content: start;
+   text-align: center;
     align-items: center;
+    gap: 5px;
+  
 }
 
 #achivements #inner-achivements #achivements_content  #achievments_counts .cardss img{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     object-fit: contain;
 }
 #achivements #inner-achivements #achivements_content  #achievments_counts .cardss h1{
-    font-size: 30px;
+    font-size: 25px;
     color: #4D4D4D;
 }
 #achivements #inner-achivements #achivements_content  #achievments_counts .cardss span{
-    font-size: 15px;
+    font-size: 14px;
     color:#717171;
     margin-top: 20px;
 }
@@ -426,19 +487,21 @@ width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+ height:800px;
     width: 100%;
 }
 #inner-calendar{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-direction: column-reverse;
     width: 90%;
     height: 100%;
+    gap: 30px;
   
 }
 #inner-calendar #calendar-img img{
-    height: 400px;
+    height: 300px;
     width: 400px;
     object-fit: cover;
 }
@@ -447,32 +510,33 @@ width: 90%;
     flex-direction: column;
     align-items: start;
     gap: 40px;
-    width: 60%;
+    width: 100%;
 }
 #inner-calendar #calendar-content  h1{
     color: #4D4D4D;
-    font-size: 40px;
+    font-size: 30px;
 }
 #inner-calendar #calendar-content  p{
  text-align: justify;
  color: #717171;
- font-size: 18px;
+ font-size: 14px;
+ 
 }
 #inner-calendar #calendar-content  button{
     color: white;
       background-color: #4CAF4F;
     border: none;
-    width: 12em;
+    width: 10em;
     color: white;
     height: 55px;
     gap: 10px;
     border-radius: 5px;
-font-size: 15px; 
+font-size: 14px; 
 }
 
 
 #customers{
-    height: 600px;
+    height:700px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -481,18 +545,21 @@ font-size: 15px;
 #customers #inner-customers{
     display: flex;
     width: 90%;
-    justify-content: start;
-    align-items: center;
+    justify-content: center;
+    align-items:start;
+    flex-direction: column;
     gap: 20px;
+    height: auto;
 }
 #customers #inner-customers #customers-img img{
-    height: 400px;
-    width: 400px;
+    height: 200px;
+    width: 200px;
     object-fit: contain;
+object-position: left;
 }
 #customers #inner-customers #customers-content{
     display: flex;
-    flex-direction: column;
+    
 }
 #customer-profile-section{
     display: flex;
@@ -504,11 +571,12 @@ font-size: 15px;
 #customers #inner-customers #customers-content{
     display: flex;
     justify-content: space-between;
-  gap: 20px;
+  gap: 10px;width: 100%;
+
 } 
 #customers #inner-customers #customers-content p{
     color: #717171;
-    font-size: 20px;
+    font-size: 14px;
     text-align: justify;
 }
 #customers #inner-customers #customers-content button{
@@ -528,9 +596,10 @@ font-size: 15px;
 }
 #customers #inner-customers #customers-content button p{
     color: #4CAF4F;
+    font-size: 14px;
 }
 #customers #inner-customers #customers-content button img{
-  height: 30px;
+  height: 20px;
 }
 
 #customer-profile{
@@ -545,7 +614,18 @@ font-size: 15px;
 #customer-profile h2{
     color: #717171;
 }
-
+#customer-profile-section{
+    display: flex;
+    flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+}
+#customer-profile-section img{
+height: 40px;
+}
 #community_updates{
     display: flex;
     justify-content: center;
@@ -569,44 +649,46 @@ font-size: 15px;
     gap: 20px;
     flex-direction: column;
     text-align: center;
-    width: 60%;
+    width:100%;
 }
 #community_updates #inner-community_updates #inner-community-heading h1{
     color: #4D4D4D;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
 }
 #community_updates #inner-community_updates #inner-community-heading p{
     color: #717171;
-    font-size:16px;
+    font-size:14px;
 }
 #community_updates #inner-community_updates  #community_cards{
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     width: 100%;
-    height: 500px;
-    margin-top: 20px;
+    height: 350px;
+    overflow: scroll;
+    gap: 40px;
 }
 #community_updates #inner-community_updates  #community_cards .cards{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 200px;
     flex-direction: column;
     position: relative;
 }
 #community_updates #inner-community_updates  #community_cards .cards img{
-    height: 250px;
+    height: 200px;
 }
 
 #community_updates #inner-community_updates  #community_cards .cards #text-content{
 background-color: white;
-width: 70%;
+width: 90%;
 height: 150px;
 position: absolute;
-top: 250px;
+top: 100px;
 color: #717171;
+font-size: 14px;
 text-align: center;
 padding: 10px;
 display: flex;
@@ -615,7 +697,11 @@ align-items: center;
 flex-direction: column;
 gap: 10px;
 border-radius: 5px;
-box-shadow:0 0 8px 1px #717171;
+
+box-shadow:0 0 8px 1px #a8a8a870;
+}
+#community_updates #inner-community_updates  #community_cards .cards #text-content p{
+    line-height: 20px;
 }
 #community_updates #inner-community_updates  #community_cards .cards #text-content a{
     display: inline-flex;
@@ -623,16 +709,16 @@ box-shadow:0 0 8px 1px #717171;
     align-items: center;
     text-decoration: none;
     color: #4CAF4F;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 400;
 }
 #community_updates #inner-community_updates  #community_cards .cards #text-content a img{
-    height: 30px;
+    height: 20px;
 }
 
 
 footer{
-    height: 700px;
+    height: auto;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -657,12 +743,12 @@ width: 100%; background-color: black;
     background-color: white;
     width: 100%;
     h1{
-        font-size: 40px;
+        font-size: 30px;
     width: 80%; text-align: center;
     }
     button{
         height: 50px;
-        width: 13rem;
+        width: 9rem;
         text-align: center;
 display: flex;
 justify-content: center;
@@ -673,20 +759,34 @@ color: white;
 gap: 10px;
 border-radius: 5px;
 img.right_img{
-    height: 70px;
+    height: 50px;
     object-fit: contain;
 }
     }
 }
+
+#footer-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+background-color: black;
+height: auto;
+width: 100%;
+padding: 40px 20px;
+gap: 40px;
+}
+
 #section1 h1{
     display: flex;
     justify-content: start;
-    align-items: center; gap: 10px;
+    align-items: center; gap:5px;
     color: white;
+    font-size: 25px;
 }
 #section1 img{
-    height: 80px;
-    width: 80px;
+    height: 30px;
+    width: 50px;
     object-fit: contain;
 }
 #section1 .description-footer {
@@ -695,18 +795,9 @@ flex-direction: column;
 gap: 10px;
 color: #717171;
 margin-top: 10px;
+font-size: 14px;
+width: 100%;
 }
-#footer-section{
-   
-    display: flex;
-    width: 100%;
-    height: 400px;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-}
-
 
 footer .footer-icon{
     display: flex;
@@ -724,6 +815,8 @@ footer #section3 {
     h1{
         color: white;
         margin-bottom: 10px;
+        font-size: 30px;
+          font-weight: 400;
     }
     ul{
         list-style: none;
@@ -736,6 +829,8 @@ footer #section3 {
         text-decoration: none;
         color: #d8efda;
         margin-top: 10px;
+        font-size: 14px;
+        font-weight: 400;
 
     }
 }
@@ -743,6 +838,8 @@ footer #section4{
         h1{
         color: white;
         margin-bottom: 30px;
+        font-size: 30px;
+        font-weight: 400;
     }
 }
 footer #section4{
@@ -757,7 +854,9 @@ footer #section4{
                 width: 260px;
                 background-color: #717171;
                 border: none;
-                border-radius: 10px;
+                border-radius: 4px;
+                padding-left: 10px;
+                outline: none;
             }
         button{
             position: absolute;
@@ -770,7 +869,7 @@ footer #section4{
             height: 40px !important;
             width: 70px !important;
             border: none;
-         
+         background-color: #4CAF4F;
        
         }
         }
@@ -779,10 +878,10 @@ footer button{
     height: 40px;
     width: 300px;
     background: none;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 5px 5px 0px;
 }
   footer button:hover{
-                background-color: #4D4D4D;
+                background-color: #4CAF4F;
             }
 footer button img{
                 height: 20px;
@@ -790,3 +889,4 @@ footer button img{
                 object-fit: cover
             };
           
+            }
